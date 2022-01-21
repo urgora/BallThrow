@@ -10103,6 +10103,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 467300876, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 467300877, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
       propertyPath: m_Camera
       value: 

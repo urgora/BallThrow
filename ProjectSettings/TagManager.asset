@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ball
+  - glass
   layers:
   - Default
   - TransparentFX
@@ -30,12 +32,12 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - HandPlayer
+  - Hand
+  - HandHolding
+  - Grabbable
+  - Grabbing
+  - Releasing
   - teleport
   m_SortingLayers:
   - name: Default
