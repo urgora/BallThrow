@@ -10,4 +10,9 @@ public class mainmenucontroller : MonoBehaviour
     {
         SceneManager.LoadScene("game");
     }  
+    public void restartlevels()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

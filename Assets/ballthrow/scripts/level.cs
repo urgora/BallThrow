@@ -19,12 +19,12 @@ public class level : MonoBehaviour
         if (noofbottle<=0)
         {
             FindObjectOfType<Gamemanager>().Gamedone();
-            Destroy(gameObject);
+          //  Destroy(gameObject);
         }
-        if(noofbottle<=0)
+        if(ballcount<=0)
         {
-            FindObjectOfType<Gamemanager>().Gamedone();
-            Destroy(gameObject);
+            FindObjectOfType<Gamemanager>().gamefalied();
+            //Destroy(gameObject);
         }
     }
 }

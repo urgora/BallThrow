@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Gamemanager : MonoBehaviour
 {
    
-    public GameObject gameover;
+    public GameObject gameover,levelfaled;
     public GameObject  normal, xrrig;
     public GameObject[] levels;
     private void Start()
@@ -21,6 +21,12 @@ public class Gamemanager : MonoBehaviour
             normal.SetActive(false);
             xrrig.SetActive(true);
             gameover.SetActive(true);
+    }
+    public void gamefalied()
+    {
+        normal.SetActive(false);
+        xrrig.SetActive(true);
+        levelfaled.SetActive(true);
     }
     public void reload()
     {
