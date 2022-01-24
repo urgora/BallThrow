@@ -6,7 +6,7 @@ public class level : MonoBehaviour
 {
     public float noofbottle,ballcount;
     public GameObject unbroken,balls;
-  
+    public bool gameovercheck;
     private void Awake()
     {
         noofbottle = unbroken.transform.childCount;
@@ -16,15 +16,20 @@ public class level : MonoBehaviour
     {
         noofbottle = unbroken.transform.childCount;
         ballcount = balls.transform.childCount;
-        if (noofbottle<=0)
+        if (noofbottle<=0&&!gameovercheck)
         {
-            FindObjectOfType<Gamemanager>().Gamedone();
-          //  Destroy(gameObject);
+            StartCoroutine(gameover());
+            gameovercheck = true;
         }
         if(ballcount<=0)
         {
             FindObjectOfType<Gamemanager>().gamefalied();
-            //Destroy(gameObject);
+           
         }
+    }
+    IEnumerator gameover()
+    {
+        yield return new WaitForSeconds(3);
+        FindObjectOfType<Gamemanager>().Gamedone();
     }
 }

@@ -11,7 +11,8 @@ public class breakglass : MonoBehaviour
        if( collision.gameObject.tag=="ball")
         {
             Instantiate(glass, transform.position, transform.rotation);
-            Destroy(gameObject);
+            if(transform.parent!=null)
+            Destroy(transform.parent.gameObject);
             Debug.Log("broken");
         }
 
